@@ -4,6 +4,8 @@ window.addEventListener("DOMContentLoaded", () => {
         tabParent = document.querySelector(".tabheader__items");
     offers_items = document.querySelector(".offers-items");
     menu_items = document.querySelector(".daytime-items");
+    loader = document.querySelector(".loader-conteiner");
+    html = document.querySelector("html");
 
     function hideTabcontent() {
         tab_content.forEach((tabs) => {
@@ -229,7 +231,10 @@ window.addEventListener("DOMContentLoaded", () => {
         moveSlides(+1)
     })
 
-
+setTimeout(() => {
+    loader.style.display = "none"
+    html.style.overflow = "auto"
+},3000)
 
 
 
